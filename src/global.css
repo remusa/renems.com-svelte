@@ -1,4 +1,49 @@
+:root {
+	/* Colors */
+	--color-background: #282c34;
+	--color-primary: #2bbac5;
+	--color-secondary: #ef596f;
+
+	/* Transitions */
+	--transitionDefault: all 0.5s ease-in-out 0.3s;
+	--transitionThreeMs: all 0.3s ease-in-out 0.2s;
+	--transitionSecond: all 1s ease;
+}
+
 /* Write your global styles here, in PostCSS syntax */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.border-bottom {
+	@apply border-b-2 border-transparent hover:border-primary transition duration-500 ease-in-out;
+}
+
+main {
+	@apply text-center;
+	@apply p-4;
+	@apply mx-auto;
+}
+
+h1 {
+	@apply text-3xl;
+	@apply leading-tight;
+	@apply my-16 mx-auto;
+	@apply max-w-xs;
+}
+
+p {
+	@apply max-w-xs;
+	@apply my-8 mx-auto;
+	@apply leading-snug;
+}
+
+@screen sm {
+	h1 {
+		@apply max-w-xl;
+	}
+
+	p {
+		@apply max-w-xl;
+	}
+}
