@@ -47,7 +47,7 @@
 			"npm run lint"
 		],
 		"*.js": "eslint --cache --fix",
-		"*.{js,css,md}": "prettier --write"
+		"*.{js,svelte,css,md}": "prettier --write"
 	},
 	"simple-git-hooks": {
 		"pre-commit": "npx lint-staged"
