@@ -1,6 +1,6 @@
 <script lang="ts">
 	import PostList from '$lib/PostList.svelte'
-	import { postsList, tagsList } from 'src/data'
+	import { postsList, tagsList } from '../data/dummy'
 </script>
 
 <div>
