@@ -1,62 +1,30 @@
-<script>
-	export let post
+<script lang="ts">
+	import PostTags from './PostTags.svelte'
 
-	const { frontmatter, excerpt } = post
+	export let post
 </script>
 
-<article class="post">
-	<a href={frontmatter.path}>
-		<h2>{frontmatter.title}</h2>
+<article class="post mb-12 text-left">
+	<a class="hover:text-primary" href={post.frontmatter.path}>
+		<h2 class="mt-2 text-left">{post.frontmatter.title}</h2>
 	</a>
 
-	<p class="date">Date: {frontmatter.date}</p>
+	<p class="text-base italic">Date: {post.frontmatter.date}</p>
 
-	<p class="excerpt">{excerpt}</p>
+	<p>{post.excerpt}</p>
 
-	<ul class="tags post-tags">
-		{#each frontmatter.tags as tag}
-			<li id="tag">
-				<a href={`/tags/${tag}/`}>{tag}</a>
-			</li>
-		{/each}
+	<ul class="list-tags">
+		<PostTags tags={post.frontmatter.tags} />
 	</ul>
 </article>
 
 <style style lang="postcss">
-	.post {
-		margin-bottom: 3rem;
+	.post::after {
+		content: '';
+		@apply block w-full pt-8 border-b text-primary;
+	}
 
-		&::after {
-			content: '';
-			display: block;
-			width: 100%;
-			padding: 2.1rem 0 0 0;
-			border-bottom: 1px solid var(--color-primary);
-		}
-
-		a:hover {
-			color: var(--color-primary);
-		}
-
-		.date {
-			font-style: italic;
-		}
-
-		.excerpt {
-		}
-
-		ul.post-tags {
-			li {
-				padding: 0.15rem 0.5rem;
-
-				a {
-					font-size: 1.35rem;
-
-					&:hover {
-						color: white;
-					}
-				}
-			}
-		}
+	p {
+		@apply m-0 py-4 max-w-prose;
 	}
 </style>

@@ -3,21 +3,27 @@
 
 	const tagsList = [
 		{
-			name: 'Machine Learning',
+			name: 'machine-learning',
 			totalCount: 3,
 		},
 	]
 	const postsList = [
 		{
 			id: 1,
-			excerpt: 'Et cillum eu adipisicing nostrud et irure occaecat dolor velit dolor in do nostrud.',
-			frontmatter: { title: 'Et cillum', date: new Date(), path: 'hello-world', tags: ['Machine Learning'] },
+			frontmatter: {
+				path:
+					'Commodo consectetur consequat minim id ex nostrud ipsum esse aliqua enim cillum nostrud laboris excepteur.',
+				title: 'Commodo consectetur.',
+				date: new Date(),
+				tags: ['machine-learning, python, pandas'],
+			},
+			excerpt: 'Aliquip id deserunt et incididunt quis officia irure sint et.',
 			fields: { slug: 'hello-world' },
 		},
 	]
 </script>
 
-<div class="">
+<div>
 	<h1>Posts</h1>
 
 	<PostList {postsList} {tagsList} />

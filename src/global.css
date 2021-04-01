@@ -15,35 +15,36 @@
 @tailwind components;
 @tailwind utilities;
 
-.border-bottom {
-	@apply border-b-2 border-transparent hover:border-primary transition duration-500 ease-in-out;
-}
-
 main {
-	@apply text-center;
-	@apply p-4;
-	@apply mx-auto;
+	@apply text-center p-4 mx-auto;
 }
 
 h1 {
-	@apply text-3xl;
-	@apply leading-tight;
-	@apply my-16 mx-auto;
-	@apply max-w-xs;
+	@apply text-3xl leading-tight my-16 mx-auto max-w-xs;
 }
 
 p {
-	@apply max-w-xs;
-	@apply my-8 mx-auto;
-	@apply leading-snug;
+	@apply max-w-xs my-8 mx-auto leading-snug;
 }
 
 @screen sm {
 	h1 {
-		@apply max-w-xl;
+		@apply max-w-xl text-center;
+	}
+
+	h2 {
+		@apply text-2xl text-center;
 	}
 
 	p {
-		@apply max-w-xl;
+		@apply max-w-xl text-lg leading-normal;
 	}
+}
+
+.border-bottom {
+	@apply border-b-2 border-transparent hover:border-primary transition duration-500 ease-in-out;
+}
+
+.list-tags {
+	@apply text-sm list-none m-0 py-2 flex flex-row justify-start items-center;
 }
