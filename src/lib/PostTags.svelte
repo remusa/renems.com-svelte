@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Tag from './Tag.svelte'
 
-	export let tags = []
+	export let tags: string[] = []
 </script>
 
 {#each tags.join('').split(',') as tag}

@@ -1,7 +1,11 @@
 <script lang="ts">
+	import type { IPost } from 'src/types'
 	import PostTags from './PostTags.svelte'
 
-	export let post
+	export let post: IPost = {
+		frontmatter: { path: '', title: '', date: new Date(), tags: [] },
+		excerpt: '',
+	}
 </script>
 
 <article class="post mb-12 text-left">
