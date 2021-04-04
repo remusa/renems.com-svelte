@@ -11,7 +11,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [15.x]
+        node-version: [14.x]
 
     steps:
       - uses: actions/checkout@v2
@@ -33,7 +33,7 @@ jobs:
         run: npm run clean
 
       - name: Build
-        run: npm run build # --if-present
+        run: npm run build
 
       - name: Deploy to Netlify
         uses: netlify/actions/cli@master
@@ -42,7 +42,6 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         with:
           args: deploy --dir=./public --prod --message \" $(git log -1 --pretty=format:%B) \"
-          # args: deploy --dir=./public --prod --open --message \" $(git log --oneline -n) \"
           secrets: '["NETLIFY_AUTH_TOKEN", "NETLIFY_SITE_ID_STAGING"]'
 
       - name: Logs for Netlify
