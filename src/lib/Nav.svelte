@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Rss from '../../static/icons/rss.svelte'
 	import NavLink from './NavLink.svelte'
 </script>
 
@@ -8,7 +9,9 @@
 	<div class="flex">
 		<NavLink to="/blog">Blog</NavLink>
 		<NavLink to="/now">Now</NavLink>
-		<NavLink to="/rss.xml"><img class="w-5 text-white" alt="rss icon" src="static/icons/rss.svg" /></NavLink>
+		<NavLink to="/rss.xml">
+			<Rss />
+		</NavLink>
 	</div>
 </nav>
 

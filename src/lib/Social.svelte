@@ -1,9 +1,12 @@
-<script>
+<script lang="ts">
+	import Github from '../../static/icons/github.svelte'
+	import Linkedin from '../../static/icons/linkedin.svelte'
+	import Mail from '../../static/icons/mail.svelte'
 	import SocialIcon from './SocialIcon.svelte'
 </script>
 
 <div class="flex justify-between">
-	<SocialIcon alt="mail icon" src="static/icons/mail.svg" to="/mail" name="Mail" />
-	<SocialIcon alt="github icon" src="static/icons/github.svg" to="/github" name="GitHub" />
-	<SocialIcon alt="linkedin icon" src="static/icons/linkedin.svg" to="/linkedin" name="Linkedin" />
+	<SocialIcon to="/mail" name="Mail"><Mail /></SocialIcon>
+	<SocialIcon to="/github" name="GitHub"><Github /></SocialIcon>
+	<SocialIcon to="/linkedin" name="LinkedIn"><Linkedin /></SocialIcon>
 </div>

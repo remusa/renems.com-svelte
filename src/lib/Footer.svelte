@@ -4,7 +4,7 @@
 	const fullYear = new Date().getFullYear()
 </script>
 
-<div class="w-full flex justify-between">
+<div class="w-full flex justify-between items-center">
 	<Social />
 
 	<a class="border-bottom" href="#header">Back top</a>

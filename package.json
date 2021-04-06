@@ -42,12 +42,12 @@
 		"node": ">= 12.17.0"
 	},
 	"lint-staged": {
+		"*.js": "eslint --cache --fix",
+		"*.{js,svelte,css,md}": "prettier --write",
 		"*.{js,ts,svelte}": [
 			"svelte-check",
 			"npm run lint"
-		],
-		"*.js": "eslint --cache --fix",
-		"*.{js,svelte,css,md}": "prettier --write"
+		]
 	},
 	"simple-git-hooks": {
 		"pre-commit": "npx lint-staged"

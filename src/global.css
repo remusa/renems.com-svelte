@@ -48,3 +48,7 @@ p {
 .list-tags {
 	@apply text-sm list-none m-0 py-2 flex flex-row justify-start items-center;
 }
+
+svg {
+	@apply h-5 w-5 fill-current group-hover:text-primary transition duration-500;
+}
