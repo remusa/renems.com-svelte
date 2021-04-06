@@ -3,7 +3,7 @@
 </script>
 
 <a
-	class="px-2 py-1 mx-1 border border-transparent bg-transparent rounded transition duration-500 hover:bg-primary"
+	class="px-2 py-1 mx-1 border border-transparent bg-transparent rounded hover:bg-primary transition-default"
 	href={to}
 >
 	<slot />

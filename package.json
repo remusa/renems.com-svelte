@@ -48,7 +48,8 @@
 	},
 	"lint-staged": {
 		"*.{js,svelte,css,md}": "prettier --write",
-		"*.{js,ts,svelte,css}": [
+		"*.{js,ts,svelte}": [
+			"npm run format",
 			"eslint --cache --fix",
 			"prettier --write",
 			"npm run lint",
