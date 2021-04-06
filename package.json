@@ -42,11 +42,11 @@
 		"node": ">= 12.17.0"
 	},
 	"lint-staged": {
-		"*.js": "eslint --cache --fix",
-		"*.{js,svelte,css,md}": "prettier --write",
-		"*.{js,ts,svelte}": [
-			"svelte-check",
-			"npm run lint"
+		"*.{js,ts,svelte,css,md}": [
+			"eslint --cache --fix",
+			"prettier --write",
+			"npm run lint",
+			"svelte-check"
 		]
 	},
 	"simple-git-hooks": {

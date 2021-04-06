@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Github from '../../static/icons/github.svelte'
-	import Linkedin from '../../static/icons/linkedin.svelte'
-	import Mail from '../../static/icons/mail.svelte'
+	import Github from '../assets/icons/github.svelte'
+	import Linkedin from '../assets/icons/linkedin.svelte'
+	import Mail from '../assets/icons/mail.svelte'
 	import SocialIcon from './SocialIcon.svelte'
 </script>
 

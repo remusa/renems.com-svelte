@@ -12,12 +12,24 @@ export default [
 		img: 'react.webp',
 	},
 	{
-		name: 'Node',
-		img: 'node.webp',
+		name: 'Apollo',
+		img: 'apollo.png',
+	},
+	{
+		name: 'Next.js',
+		img: 'next.png',
+	},
+	{
+		name: 'Gatsby',
+		img: 'gatsby.png',
 	},
 	{
 		name: 'GraphQL',
 		img: 'graphql.png',
+	},
+	{
+		name: 'Node',
+		img: 'node.webp',
 	},
 	{
 		name: 'Python',
@@ -34,17 +46,5 @@ export default [
 	{
 		name: 'PostgreSQL',
 		img: 'postgresql.png',
-	},
-	{
-		name: 'Apollo',
-		img: 'apollo.png',
-	},
-	{
-		name: 'Gatsby',
-		img: 'gatsby.png',
-	},
-	{
-		name: 'Next.js',
-		img: 'next.png',
 	},
 ]

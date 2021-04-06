@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Rss from '../../static/icons/rss.svelte'
+	import Rss from '../assets/icons/rss.svelte'
 	import NavLink from './NavLink.svelte'
 </script>
 
